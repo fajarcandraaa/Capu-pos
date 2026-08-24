@@ -5,6 +5,7 @@ mobile-ios/
 web-frontend/
 # Worktrees
 worktrees/*
+worktrees/README.md
 # DOCUMENTS
 docs/*.md
 DECISIONS.md
