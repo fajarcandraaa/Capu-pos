@@ -1,5 +1,10 @@
 # PROJECTS
-projects/*
+backend-service/
+mobile-android/
+mobile-ios/
+web-frontend/
+# Worktrees
+worktrees/*
 # DOCUMENTS
 docs/*.md
 DECISIONS.md
