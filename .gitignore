@@ -1,0 +1,8 @@
+# PROJECTS
+projects/*
+# DOCUMENTS
+docs/*.md
+DECISIONS.md
+# CONFIGS
+*.yaml
+.DS_Store
