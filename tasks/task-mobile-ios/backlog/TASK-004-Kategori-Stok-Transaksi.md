@@ -5,12 +5,12 @@
 - Base branch: main
 - Requirement ref: FR-02 (Kategori), FR-03 (Stok), FR-04, FR-05, FR-07 (Transaksi)
 - Allowed paths:
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Kategori/**
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Stok/**
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Transaksi/**
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/TransaksiManual/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Kategori/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Stok/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Transaksi/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/TransaksiManual/**
 - Forbidden paths:
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Pembayaran/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Pembayaran/**
 - Dependency: TASK-001, TASK-003
 - Acceptance criteria:
   - [ ] Kelola kategori: tambah, ubah nama, hapus, reorder

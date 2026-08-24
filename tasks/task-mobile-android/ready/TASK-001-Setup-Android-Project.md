@@ -5,10 +5,10 @@
 - Base branch: main
 - Requirement ref: Setup project structure sesuai TRD Clean Architecture
 - Allowed paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/**
-  - projects/mobile-android/app/src/main/resources/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/**
+  - projects/mobile-android/capupos-android/app/src/main/resources/**
 - Forbidden paths:
-  - projects/mobile-android/build.gradle (hanya untuk konfigurasi build)
+  - projects/mobile-android/capupos-android/build.gradle (hanya untuk konfigurasi build)
 - Dependency: tidak ada
 - Acceptance criteria:
   - [ ] Package structure mengikuti SDD: presentation/, domain/, data/

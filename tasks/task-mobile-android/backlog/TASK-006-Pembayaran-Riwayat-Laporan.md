@@ -5,12 +5,12 @@
 - Base branch: main
 - Requirement ref: FR-06 (Pembayaran), FR-07 (Riwayat), FR-09 (Laporan)
 - Allowed paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/pembayaran/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/riwayat/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/laporan/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/BayarTransaksiUseCase.kt, HapusTransaksiUseCase.kt, GenerateLaporanUseCase.kt
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/pembayaran/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/riwayat/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/laporan/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/BayarTransaksiUseCase.kt, HapusTransaksiUseCase.kt, GenerateLaporanUseCase.kt
 - Forbidden paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
 - Dependency: TASK-001, TASK-005
 - Acceptance criteria:
   - [ ] Pembayaran tunai: input nominal manual/suggestion, kembalian auto

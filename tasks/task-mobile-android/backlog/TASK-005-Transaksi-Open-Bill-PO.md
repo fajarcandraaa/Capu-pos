@@ -5,12 +5,12 @@
 - Base branch: main
 - Requirement ref: FR-04 (Transaksi), FR-05 (Pre-order), FR-07 (Open Bill)
 - Allowed paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/transaksi/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/transaksimanual/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/SimpanTransaksiUseCase.kt, BayarTransaksiUseCase.kt, UbahStatusPOUseCase.kt
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/data/dao/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/transaksi/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/transaksimanual/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/SimpanTransaksiUseCase.kt, BayarTransaksiUseCase.kt, UbahStatusPOUseCase.kt
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/dao/**
 - Forbidden paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/pembayaran/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/pembayaran/**
 - Dependency: TASK-001, TASK-004
 - Acceptance criteria:
   - [ ] Pilih produk by kategori/search ke keranjang

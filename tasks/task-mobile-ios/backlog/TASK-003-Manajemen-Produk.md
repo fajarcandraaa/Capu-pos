@@ -5,12 +5,12 @@
 - Base branch: main
 - Requirement ref: FR-01 (Manajemen Produk)
 - Allowed paths:
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Produk/**
-  - projects/mobile-ios/CappuPOS/Sources/Domain/UseCase/TambahProdukUseCase.swift, UbahProdukUseCase.swift, HapusProdukUseCase.swift
-  - projects/mobile-ios/CappuPOS/Sources/Domain/Model/Produk.swift
-  - projects/mobile-ios/CappuPOS/Sources/Data/Model/ProdukModel.swift
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Produk/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Domain/UseCase/TambahProdukUseCase.swift, UbahProdukUseCase.swift, HapusProdukUseCase.swift
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Domain/Model/Produk.swift
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Data/Model/ProdukModel.swift
 - Forbidden paths:
-  - projects/mobile-ios/CappuPOS/Sources/Data/Database/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Data/Database/**
 - Dependency: TASK-001, TASK-002
 - Acceptance criteria:
   - [ ] List produk grid + tab kategori berfungsi

@@ -5,11 +5,11 @@
 - Base branch: main
 - Requirement ref: FR-14 (Cek produk kosong) + Onboarding sesuai UI/UX Flow
 - Allowed paths:
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Onboarding/**
-  - projects/mobile-ios/CappuPOS/Sources/Domain/UseCase/CekProdukKosongUseCase.swift
-  - projects/mobile-ios/CappuPOS/Sources/Data/Repository/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Onboarding/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Domain/UseCase/CekProdukKosongUseCase.swift
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Data/Repository/**
 - Forbidden paths:
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Produk/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Produk/**
 - Dependency: TASK-001
 - Acceptance criteria:
   - [ ] Splash screen tampil < 2 detik

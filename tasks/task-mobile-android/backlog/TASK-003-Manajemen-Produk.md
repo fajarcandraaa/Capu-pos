@@ -5,12 +5,12 @@
 - Base branch: main
 - Requirement ref: FR-01 (Manajemen Produk)
 - Allowed paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/produk/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/TambahProdukUseCase.kt, UbahProdukUseCase.kt, HapusProdukUseCase.kt
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/domain/model/Produk.kt
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/data/dao/ProdukDao.kt
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/produk/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/TambahProdukUseCase.kt, UbahProdukUseCase.kt, HapusProdukUseCase.kt
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/domain/model/Produk.kt
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/dao/ProdukDao.kt
 - Forbidden paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
 - Dependency: TASK-001, TASK-002
 - Acceptance criteria:
   - [ ] List produk grid + tab kategori berfungsi

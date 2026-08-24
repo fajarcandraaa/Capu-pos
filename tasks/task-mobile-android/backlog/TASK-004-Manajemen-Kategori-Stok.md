@@ -5,12 +5,12 @@
 - Base branch: main
 - Requirement ref: FR-02 (Manajemen Kategori), FR-03 (Manajemen Stok)
 - Allowed paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/kategori/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/stok/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/data/dao/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/kategori/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/stok/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/dao/**
 - Forbidden paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
 - Dependency: TASK-001, TASK-003
 - Acceptance criteria:
   - [ ] Kelola kategori: tambah, ubah nama, hapus, reorder drag&drop

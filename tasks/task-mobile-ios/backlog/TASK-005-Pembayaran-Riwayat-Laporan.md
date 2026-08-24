@@ -5,12 +5,12 @@
 - Base branch: main
 - Requirement ref: FR-06, FR-07, FR-09 (Pembayaran, Riwayat, Laporan)
 - Allowed paths:
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Pembayaran/**
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Riwayat/**
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/Laporan/**
-  - projects/mobile-ios/CappuPOS/Sources/Domain/UseCase/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Pembayaran/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Riwayat/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/Laporan/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Domain/UseCase/**
 - Forbidden paths:
-  - projects/mobile-ios/CappuPOS/Sources/Data/Model/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Data/Model/**
 - Dependency: TASK-001, TASK-004
 - Acceptance criteria:
   - [ ] Pembayaran tunai: input nominal manual/suggestion, kembalian auto

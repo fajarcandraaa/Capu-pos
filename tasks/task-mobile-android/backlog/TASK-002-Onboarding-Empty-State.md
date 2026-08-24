@@ -5,11 +5,11 @@
 - Base branch: main
 - Requirement ref: FR-14 (Cek produk kosong) + Onboarding sesuai UI/UX Flow
 - Allowed paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/onboarding/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/CekProdukKosongUseCase.kt
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/data/repository/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/onboarding/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/CekProdukKosongUseCase.kt
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/repository/**
 - Forbidden paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/produk/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/produk/**
 - Dependency: TASK-001
 - Acceptance criteria:
   - [ ] Splash screen tampil < 2 detik

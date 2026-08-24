@@ -5,12 +5,12 @@
 - Base branch: main
 - Requirement ref: Setup project structure sesuai TRD Clean Architecture
 - Allowed paths:
-  - projects/mobile-ios/CappuPOS/Sources/Presentation/**
-  - projects/mobile-ios/CappuPOS/Sources/Domain/**
-  - projects/mobile-ios/CappuPOS/Sources/Data/**
-  - projects/mobile-ios/CappuPOS/Resources/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Presentation/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Domain/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Sources/Data/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Resources/**
 - Forbidden paths:
-  - projects/mobile-ios/CappuPOS/Tests/**
+  - projects/mobile-ios/capupos-ios/CappuPOS/Tests/**
 - Dependency: tidak ada
 - Acceptance criteria:
   - [ ] Package structure mengikuti SDD: Presentation/, Domain/, Data/

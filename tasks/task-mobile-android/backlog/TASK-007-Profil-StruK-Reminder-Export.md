@@ -5,13 +5,13 @@
 - Base branch: main
 - Requirement ref: FR-10 (Profil Usaha), FR-11 (Struk), FR-12 (Reminder), FR-13 (Export)
 - Allowed paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/profilusaha/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/struk/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/reminder/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/export/**
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/UbahDataUsahaUseCase.kt, GenerateStrukUseCase.kt, CekReminderBackupUseCase.kt, ExportDataUseCase.kt
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/profilusaha/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/struk/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/reminder/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/presentation/export/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/domain/usecase/UbahDataUsahaUseCase.kt, GenerateStrukUseCase.kt, CekReminderBackupUseCase.kt, ExportDataUseCase.kt
 - Forbidden paths:
-  - projects/mobile-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
+  - projects/mobile-android/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
 - Dependency: TASK-001, TASK-006
 - Acceptance criteria:
   - [ ] Profil usaha: ubah nama, logo, kategori, deskripsi, alamat, telepon
