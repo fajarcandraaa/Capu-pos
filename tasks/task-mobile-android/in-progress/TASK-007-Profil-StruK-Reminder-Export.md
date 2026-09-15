@@ -102,6 +102,37 @@
   - Resource baru di luar daftar allowed_paths literal: `res/xml/file_paths.xml`
     (lihat unresolved issue #1)
   - `strings.xml`: tambahan string Profil Usaha/Struk/Reminder/Export
+
+### Iterasi 2 — fix hasil code-review [2026-09-15]
+
+- Reviewer menandai 2 bug + 2 opsional. Hasil:
+  1. **Logo tidak persist (FIXED)**: GetContent URI sementara, hilang setelah
+     restart. Fix: copy stream ke `filesDir/logo_usaha.jpg`, simpan path file
+     di `Store.logo`; display handle path file + legacy content URI.
+  2. **Counter reminder tidak reset di "Export Sekarang" (FIXED)**:
+     `markReminderShown()` dipanggil di positive button HomeActivity, cegah
+     popup muncul ulang tiap `onResume` bila user back-out tanpa export.
+  3. Domain import `android.content.SharedPreferences` (layering smell):
+     TIDAK diubah — abstraksi storage interface menambah file/interface baru
+     di luar kebutuhan AC; disimpan sebagai tech-debt catatan.
+  4. `GenerateStrukUseCase` pakai `getIntegerInstance` (buang desimal):
+     TIDAK diubah — seluruh UI existing (PembayaranActivity, TransaksiActivity,
+     CartAdapter, BelumBayarAdapter) juga format dengan `maximumFractionDigits
+     = 0`; sen tidak pernah ditampilkan di app ini, output konsisten.
+- Fix tambahan ditemukan saat rebuild: build "BUILD SUCCESSFUL" iterasi 1
+  ternyata dijalankan dari main checkout (kode lama), bukan worktree — PR #16
+  belum pernah terverifikasi kompilasi. Build dari worktree root menemukan
+  4 error kompilasi + 1 error resource linking, semua FIXED:
+  - `strings.xml`: tambah `menu_profil_pengaturan` (dipakai HomeActivity)
+  - layout `activity_profil_usaha.xml`: string ref `btn_export_data` tidak
+    ada, diganti `export_title`
+  - `ExportActivity.kt`: chooser title `btn_export_data` tidak ada, diganti
+    `export_title`
+  - `ExportDataUseCase.kt`: `SheetBuilder`/`SheetData` jadi `internal`
+    (dipakai di signature `XlsxWriter.write`)
+- Command test iterasi 2: `JAVA_HOME=/opt/homebrew/opt/openjdk@17 ./gradlew
+  assembleDebug` dari WORKTREE root. Hasil: BUILD SUCCESSFUL (41 actionable
+  tasks: 13 executed, 28 up-to-date).
 - Unresolved issue (bila ada):
   1. **`res/xml/file_paths.xml` dibuat di luar allowed_paths literal**
      (hanya `res/layout/**` dan `res/values/strings.xml` yang tercantum).
