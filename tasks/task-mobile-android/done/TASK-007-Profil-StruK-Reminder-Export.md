@@ -44,12 +44,17 @@
   - apps/capupos-android/app/src/main/java/com/mindtoscreen/cappupos/data/entity/**
 - Dependency: TASK-001, TASK-006
 - Acceptance criteria:
-  - [ ] Profil usaha: ubah nama, logo, kategori, deskripsi, alamat, telepon
-  - [ ] Struk digital: item, subtotal, metode bayar, kembalian, share
-  - [ ] Reminder backup mingguan: popup wajib dismiss, pilih "Export Sekarang" atau "Nanti Saja"
-  - [ ] Export Excel: 3 sheet (Transaksi, Produk, Laporan Ringkas), share/save via Android Sharesheet
-  - [ ] Tidak ada perubahan di luar allowed paths
-- Status: in_progress
+  - [x] Profil usaha: ubah nama, logo, kategori, deskripsi, alamat, telepon
+  - [x] Struk digital: item, subtotal, metode bayar, kembalian, share
+  - [x] Reminder backup mingguan: popup wajib dismiss, pilih "Export Sekarang" atau "Nanti Saja"
+  - [x] Export Excel: 3 sheet (Transaksi, Produk, Laporan Ringkas), share/save via Android Sharesheet
+  - [x] Tidak ada perubahan di luar allowed paths
+- Status: done
+
+## Merge [2026-09-15]
+
+- PR #16 merged ke `main` (merge commit `605d3d6`).
+- Commit tambahan `5b5f16b fix(TASK-007): persist logo ke internal storage + reset reminder di Export Sekarang` — menutup 2 finding code-review sebelum merge.
 
 ## Amendment [2026-09-14] — TL/SA (lihat DECISIONS.md entry [2026-09-14])
 

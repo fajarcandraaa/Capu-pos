@@ -1,7 +1,7 @@
 ---
 name: frontend-engineer
 description: Implementasi task frontend web sesuai task contract dan DESIGN.md.
-model: 9router/role-frontend
+model: cmb-agent-coding
 permissionMode: default
 background: true
 isolation: worktree

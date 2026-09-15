@@ -1,7 +1,7 @@
 ---
 name: project-manager
 description: Mengelola requirement, scope, task state, dependency, dan handoff.
-model: 9router/role-pm
+model: cmb-agent-core
 permissionMode: default
 background: false
 maxTurns: 40

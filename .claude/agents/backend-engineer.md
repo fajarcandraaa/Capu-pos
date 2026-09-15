@@ -1,7 +1,7 @@
 ---
 name: backend-engineer
 description: Implementasi task backend sesuai task contract yang disetujui.
-model: 9router/role-backend
+model: cmb-agent-coding
 permissionMode: default
 background: true
 isolation: worktree

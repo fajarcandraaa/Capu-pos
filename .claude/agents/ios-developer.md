@@ -1,7 +1,7 @@
 ---
 name: ios-developer
 description: Implementasi task native iOS (Swift) sesuai task contract.
-model: 9router/role-ios
+model: cmb-agent-coding
 permissionMode: default
 background: true
 isolation: worktree
