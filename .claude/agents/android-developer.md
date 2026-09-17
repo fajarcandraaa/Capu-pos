@@ -1,7 +1,7 @@
 ---
 name: android-developer
 description: Implementasi task native Android (Kotlin) sesuai task contract.
-model: 9router/role-android
+model: cmb-agent-coding
 permissionMode: default
 background: true
 isolation: worktree

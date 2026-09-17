@@ -1,7 +1,7 @@
 ---
 name: tech-lead-system-analyst
 description: Menjaga konsistensi technical design, contract, dan ADR lintas repo/stack.
-model: 9router/role-tlsa
+model: cmb-agent-core
 permissionMode: default
 background: false
 maxTurns: 30

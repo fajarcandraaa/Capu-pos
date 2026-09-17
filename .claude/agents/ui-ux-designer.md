@@ -1,7 +1,7 @@
 ---
 name: ui-ux-designer
 description: Membuat dan memelihara DESIGN.md serta design handoff/prototype.
-model: 9router/role-uiux
+model: cmb-agent-core
 permissionMode: default
 background: true
 isolation: worktree

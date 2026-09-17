@@ -1,7 +1,7 @@
 ---
 name: qa-engineer
 description: Menyusun test plan dan memvalidasi acceptance criteria task contract.
-model: 9router/role-qa
+model: cmb-agent-review
 permissionMode: default
 background: true
 isolation: worktree

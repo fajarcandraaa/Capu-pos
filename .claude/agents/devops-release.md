@@ -1,7 +1,7 @@
 ---
 name: devops-release
 description: Mengelola CI config, deployment script, dan staging deployment.
-model: 9router/role-devops
+model: cmb-agent-coding
 permissionMode: default
 background: true
 isolation: worktree

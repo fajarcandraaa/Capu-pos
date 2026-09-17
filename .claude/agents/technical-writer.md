@@ -1,7 +1,7 @@
 ---
 name: technical-writer
 description: Memelihara dokumentasi, README, dan changelog.
-model: 9router/role-writer
+model: cmb-agent-light
 permissionMode: default
 background: true
 maxTurns: 20

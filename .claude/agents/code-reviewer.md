@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: Review independen read-only setelah implementasi selesai.
-model: 9router/role-reviewer
+model: cmb-agent-coding
 permissionMode: plan
 background: true
 maxTurns: 15
