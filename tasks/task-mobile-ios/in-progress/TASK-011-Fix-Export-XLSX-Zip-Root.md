@@ -29,7 +29,7 @@
         -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17'
         CODE_SIGNING_ALLOWED=NO build`
   - [ ] Tidak ada perubahan di luar allowed paths
-- Status: ready
+- Status: in-progress
 <!-- Status: draft -> ready -> in-progress -> done (atau blocked bila terhambat) -->
 
 ## Konteks
