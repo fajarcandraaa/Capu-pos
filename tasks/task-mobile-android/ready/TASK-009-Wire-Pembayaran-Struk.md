@@ -20,8 +20,9 @@
   - [ ] Struk ditampilkan setelah `BayarTransaksiUseCase` sukses (FR-06.4), tidak langsung kembali
   - [ ] Guard kembalian: baris "Diterima/Kembalian" hanya dicetak bila `metodeBayar == "tunai"` (FR-11.1)
   - [ ] Tidak ada perubahan di luar allowed paths
-- Status: draft
+- Status: ready
 <!-- Status: draft -> ready -> in-progress -> done (atau blocked bila terhambat) -->
+<!-- Diverifikasi TL/SA [2026-09-21]: semua allowed_paths sudah ada di source, PembayaranActivity/BayarTransaksiUseCase dikonfirmasi belum wired (memang scope task ini). -->
 
 ## Catatan Sesi (diisi role-agent yang mengerjakan)
 

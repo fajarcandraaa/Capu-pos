@@ -18,8 +18,9 @@
   - [ ] Search tersedia di Laporan (FR-09.3)
   - [ ] Filter memakai pola yang sama dengan Riwayat (setFilterTanggal dsb) — konsisten, tanpa duplikasi logic
   - [ ] Tidak ada perubahan di luar allowed paths
-- Status: draft
+- Status: ready
 <!-- Status: draft -> ready -> in-progress -> done (atau blocked bila terhambat) -->
+<!-- Diverifikasi TL/SA [2026-09-21]: FilterRiwayat (domain/model) dipakai read-only via import, tidak perlu masuk allowed_paths. Tidak ada gap kontrak. -->
 
 ## Catatan Sesi (diisi role-agent yang mengerjakan)
 

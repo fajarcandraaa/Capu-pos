@@ -19,8 +19,9 @@
   - [ ] Merge terjadi sebelum `SimpanTransaksiUseCase` — tidak ada Order terpisah untuk item manual
   - [ ] `TransaksiManualViewModel.kt:91` tidak lagi langsung simpan Order terpisah
   - [ ] Tidak ada perubahan di luar allowed paths
-- Status: draft
+- Status: ready
 <!-- Status: draft -> ready -> in-progress -> done (atau blocked bila terhambat) -->
+<!-- Diverifikasi TL/SA [2026-09-21]: semua allowed_paths sudah ada di source, tidak ada gap kontrak. -->
 
 ## Catatan Sesi (diisi role-agent yang mengerjakan)
 

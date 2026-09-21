@@ -16,8 +16,9 @@
   - [ ] `CekReminderBackupUseCase.execute()` tidak return `true` saat `lastReminderAt == 0L`
   - [ ] Reminder muncul hanya bila `now - lastReminderAt >= INTERVAL_MILLIS` (7 hari)
   - [ ] Tidak ada perubahan di luar allowed paths
-- Status: draft
+- Status: ready
 <!-- Status: draft -> ready -> in-progress -> done (atau blocked bila terhambat) -->
+<!-- Diverifikasi TL/SA [2026-09-21]: semua allowed_paths sudah ada di source, tidak ada gap kontrak. -->
 
 ## Catatan Sesi (diisi role-agent yang mengerjakan)
 

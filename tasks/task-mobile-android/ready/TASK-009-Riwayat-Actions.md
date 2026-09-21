@@ -23,8 +23,9 @@
   - [ ] Tombol "Sembunyikan" + "Tandai Lunas" tersedia di adapter riwayat/belum bayar
   - [ ] "Sembunyikan" reversible (BR-05) dan tidak mempengaruhi perhitungan laporan
   - [ ] Tidak ada perubahan di luar allowed paths
-- Status: draft
+- Status: ready
 <!-- Status: draft -> ready -> in-progress -> done (atau blocked bila terhambat) -->
+<!-- Diverifikasi TL/SA [2026-09-21]: OrderDao.hide() dikonfirmasi ada; OrderRepository/Impl belum expose hide() (memang scope task ini). Tidak ada gap kontrak. -->
 
 ## Catatan Sesi (diisi role-agent yang mengerjakan)
 
