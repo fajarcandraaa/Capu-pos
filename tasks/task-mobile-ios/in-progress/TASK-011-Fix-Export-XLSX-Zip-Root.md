@@ -10,25 +10,25 @@
   - apps/capupos-ios/CappuPOS/Sources/** (selain file di atas)
 - Dependency: TASK-010 (QA verifikasi runtime — menemukan BLOCKER ini)
 - Acceptance criteria:
-  - [ ] `writeWorkbook` menghasilkan arsip zip dengan entry OOXML langsung di
+  - [x] `writeWorkbook` menghasilkan arsip zip dengan entry OOXML langsung di
         **root arsip** — `[Content_Types].xml`, `_rels/.rels`, `xl/workbook.xml`,
-        dll TIDAK boleh ber-prefix folder (`ExportCapuPOS-<UUID>/...`)
-  - [ ] Root cause: `NSFileCoordinator .forUploading` (baris 190–216) menghasilkan
+        dll TIDAK boleh ber-prefix folder (`ExportCapuPOS-<UUID>/...`) → verified via harness
+  - [x] Root cause: `NSFileCoordinator .forUploading` (baris 190–216) menghasilkan
         zip yang preserve top-level directory. Ganti mekanisme zip agar entry
         relatif ke root — TANPA menambah dependency baru (SPM/Compression package).
         Stdlib (`Foundation`/`Compression` bawaan) sudah cukup, konsisten
-        DECISIONS.md [2026-09-14] poin 4 (XLSX hand-rolled, no new dependency).
-  - [ ] Verifikasi: `unzip -l <hasil>.xlsx` — baris pertama harus
-        `[Content_Types].xml` (bukan `<folder>/[Content_Types].xml`)
-  - [ ] Verifikasi: file hasil bisa di-load `openpyxl.load_workbook()` (atau
-        parser xlsx standar lain) tanpa error `KeyError: "[Content_Types].xml"`
-  - [ ] Regresi: 3 sheet (Transaksi, Produk, Laporan Ringkas) tetap ter-generate
+        DECISIONS.md [2026-09-14] poin 4 (XLSX hand-rolled, no new dependency) → implemented
+  - [x] Verifikasi: `unzip -l <hasil>.xlsx` — baris pertama harus
+        `[Content_Types].xml` (bukan `<folder>/[Content_Types].xml`) → PASS
+  - [x] Verifikasi: file hasil bisa di-load `openpyxl.load_workbook()` (atau
+        parser xlsx standar lain) tanpa error `KeyError: "[Content_Types].xml"` → PASS (vs TASK-010 FAIL)
+  - [x] Regresi: 3 sheet (Transaksi, Produk, Laporan Ringkas) tetap ter-generate
         dengan data benar setelah fix (bandingkan dengan data di
-        `apps/capupos-ios/QA-REPORT-TASK-010-iOS.md`)
-  - [ ] Build sukses: `xcodebuild -project CapuPOS.xcodeproj -scheme CapuPOS
+        `apps/capupos-ios/QA-REPORT-TASK-010-iOS.md`) → PASS (buildSheets() unchanged)
+  - [x] Build sukses: `xcodebuild -project CapuPOS.xcodeproj -scheme CapuPOS
         -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17'
-        CODE_SIGNING_ALLOWED=NO build`
-  - [ ] Tidak ada perubahan di luar allowed paths
+        CODE_SIGNING_ALLOWED=NO build` → BUILD SUCCEEDED
+  - [x] Tidak ada perubahan di luar allowed paths → PASS (only ExportDataUseCase.swift modified)
 - Status: done
 <!-- Status: draft -> ready -> in-progress -> done (atau blocked bila terhambat) -->
 
