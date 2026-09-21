@@ -29,7 +29,7 @@
         -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17'
         CODE_SIGNING_ALLOWED=NO build`
   - [ ] Tidak ada perubahan di luar allowed paths
-- Status: in-progress
+- Status: done
 <!-- Status: draft -> ready -> in-progress -> done (atau blocked bila terhambat) -->
 
 ## Konteks
@@ -58,6 +58,16 @@ bagian "Temuan kritis (root cause)" dan "Eskalasi".
 ## Catatan Sesi (diisi role-agent yang mengerjakan)
 
 - Command test yang dijalankan:
-- Hasil:
+  - `xcodebuild -project CapuPOS.xcodeproj -scheme CapuPOS -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 17' CODE_SIGNING_ALLOWED=NO build` → **BUILD SUCCEEDED**.
+  - Harness standalone (`$CLAUDE_JOB_DIR/tmp`, salinan logic zip persis dari `writeZip`/`crc32Checksum`/`appendLE16`/`appendLE32`, tidak di-commit) — fabrikasi struktur OOXML sama dengan `writeWorkbook`, jalankan `writeZip`, lalu:
+    - `unzip -l <hasil>.xlsx` → baris pertama `[Content_Types].xml` (bukan `<folder>/...`). PASS.
+    - `python3 -c "import zipfile; ..."` → semua entry (`[Content_Types].xml`, `_rels/.rels`, `xl/workbook.xml`, `xl/_rels/workbook.xml.rels`, `xl/worksheets/sheet*.xml`) di root, tanpa prefix folder. PASS.
+    - `openpyxl.load_workbook()` (venv terpisah, `pip install openpyxl`) dengan OOXML valid minimal → sukses load, baca sheet + cell. PASS (root cause `KeyError: "[Content_Types].xml"` hilang).
+- Hasil: **PASS.** Root cause (zip via `NSFileCoordinator .forUploading` preserve top-level directory) diperbaiki dengan zip manual (local header + central directory + EOCD, method 0/stored, CRC32 pure Swift) — entry ditulis relatif ke root arsip.
+  - Bug tambahan ditemukan & diperbaiki selama implementasi (di luar deskripsi awal, masih dalam file yang sama/allowed path):
+    1. `directory.path` vs path hasil `FileManager.enumerator` berbeda di macOS/simulator karena `/var` adalah symlink ke `/private/var` — enumerator resolve symlink, `directory.path` mentah tidak. Tanpa fix ini, `dropFirst` salah hitung dan entry tetap bocor sisa nama folder. Fix: pakai `standardizedFileURL.path` untuk `directory` maupun tiap file sebelum hitung path relatif.
+    2. Opsi `.skipsHiddenFiles` pada enumerator membuat `_rels/.rels` (wajib OOXML, nama file diawali titik) ke-skip dari arsip — akan bikin xlsx invalid lagi (walau `[Content_Types].xml` sudah di root). Fix: hapus opsi tersebut.
+  - Regresi 3 sheet (Transaksi, Produk, Laporan Ringkas): tidak diubah — hanya mekanisme pengemasan zip yang diganti, `buildSheets()`/isi XML tiap sheet identik dengan sebelum fix (data sudah diverifikasi benar di QA-REPORT-TASK-010-iOS.md).
 - File yang berubah:
-- Unresolved issue (bila ada):
+  - `apps/capupos-ios/CappuPOS/Sources/Domain/UseCase/ExportDataUseCase.swift` (satu-satunya allowed path) — ganti `writeWorkbook` bagian zip (`NSFileCoordinator .forUploading` → zip manual), tambah `writeZip`/`appendLE16`/`appendLE32`/`crc32Checksum`.
+- Unresolved issue: tidak ada. Rekomendasi lanjutan (di luar scope task ini): device test nyata di Numbers/Excel (mesin dev tidak punya app tsb, sama seperti keterbatasan QA TASK-010).
